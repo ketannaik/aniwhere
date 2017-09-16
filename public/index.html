@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/full-slider.css" />
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/carousel.css" />
+	<link rel="stylesheet" href="css/hover.css" />
 
 	<!-- custom styles -->
 
@@ -25,35 +26,50 @@
 	<!-- ANGULAR CUSTOM -->
 	<script src="js/controllers/MainCtrl.js"></script>
 	<script src="js/controllers/NerdCtrl.js"></script>
-	<script src="js/services/NerdService.js"></script>
+	<script src="js/controllers/aboutus.controller.js"></script>
 	<script src="js/controllers/GeekCtrl.js"></script>
+	<script src="js/controllers/international.controller.js"></script>
+	<script src="js/controllers/domestic.controller.js"></script>
+
+	<script src="js/services/NerdService.js"></script>
 	<script src="js/services/GeekService.js"></script>
+
 	<script src="js/appRoutes.js"></script>
 	<script src="js/app.js"></script>
 </head>
 
 <body ng-app="sampleApp" ng-controller="NerdController">
 
-	<div class="container">
+	<nav class="navbar navbar-inverse navbar-fixed">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">
+				<!-- <img class=".img-responsive" src="images/logo2.png" alt="Company Logo"></img> -->
+				Aniwhere Tours
+			</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a href="/international">International</a></li>
+			<li><a href="/domestic">Domestic</a></li>
+			<li><a href="/aboutus">About Us</a></li>
+		</ul>
+	</nav>
 
-		<nav class="home-header">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="/">
-					 <img class=".img-responsive" src="images/logo.png" alt="Company Logo" style="width:300px; height:35px"></img>
-				</a>
-			</div>
-			<ul class="nav navbar-nav">
-				<li><a href="/international">International</a></li>
-				<li><a href="/domestic">Domestic</a></li>
-				<li><a href="/aboutus">Services</a></li>
-				<li><a href="/aboutus">About Us</a></li>
-			</ul>
-		</nav>
+	<div class="container">
 
 		<!-- ANGULAR DYNAMIC CONTENT -->
 		<div ng-view></div>
 
 	</div>
+
+	<!-- <footer class="text-muted">
+		<div class="container">
+			<p class="float-right">
+				<a href="#">Back to top</a>
+			</p>
+			<p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+			<p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+		</div>
+	</footer> -->
 
 </body>
 

@@ -9,13 +9,18 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 		})
 
 		.when('/international', {
-			templateUrl: 'views/nerd.html',
-			controller: 'NerdController'
+			templateUrl: 'views/international.html',
+			controller: 'InternationalController'
 		})
 
 		.when('/domestic', {
-			templateUrl: 'views/geek.html',
-			controller: 'GeekController'	
+			templateUrl: 'views/domestic.html',
+			controller: 'DomesticController'	
+		})
+		
+		.when('/aboutus', {
+			templateUrl: 'views/aboutus.html',
+			controller: 'AboutusController'
 		});
 
 	$locationProvider.html5Mode(true);
