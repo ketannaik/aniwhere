@@ -18,6 +18,11 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'DomesticController'	
 		})
 		
+		.when('/enquiry', {
+			templateUrl: 'views/enquiryDetails.html',
+			controller: 'EnquiryController'	
+		})
+		
 		.when('/aboutus', {
 			templateUrl: 'views/aboutus.html',
 			controller: 'AboutusController'

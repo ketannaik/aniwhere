@@ -2,6 +2,7 @@
 -------------------------------------------------- */
 body {
     padding-bottom: 40px;
+    background-image: url('../images/background4.jpg');
     /* color: #5a5a5a; */
   }
   
@@ -140,6 +141,7 @@ body {
     padding-top: 3rem;
     padding-bottom: 3rem;
     background-color: #f7f7f7;
+    background-image: url('images/Lake-Tahoe-Background.png');
   }
   
   .card {
@@ -165,5 +167,9 @@ body {
   
   footer p {
     margin-bottom: .25rem;
+  }
+  
+  .backgroundtheme {
+  	background-image: url('../images/background1.jpg');
   }
   
