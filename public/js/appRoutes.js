@@ -18,8 +18,8 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'DomesticController'	
 		})
 		
-		.when('/enquiry', {
-			templateUrl: 'views/enquiryDetails.html',
+		.when('/contactus', {
+			templateUrl: 'views/contactus.html',
 			controller: 'EnquiryController'	
 		})
 		

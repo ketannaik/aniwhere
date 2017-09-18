@@ -1,34 +1,38 @@
- <html>
-  
-  <script type="text/javascript">
-  	
-  function getUrlData() {
-      var destination = getParameter("destination");
-      document.getElementsByName("destination").value = destination;
-  }
-  </script>
+<div class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<span style="font-size: 16px"><b>Enquiry For {{destination}}</b></span>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<div class="form-group">
+						<label for="name">Your Name</label>
+						<input type="text" class="form-control" id="name" placeholder="Enter Name" ng-model="name">
+					</div>
+					<label for="email">Email address</label>
+					<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email"
+					ng-model="email">
+					<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				</div>
 
-<div class="container">
-	<div class="jumbotron text-left">
-  	
-  <div class="row">
-		<label for="name">Your name: </label><br />
-		<input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+				<div class="form-group">
+					<label for="phoneNo">Mobile No</label>
+					<input type="text" class="form-control" id="mobile" ng-model="mobile" placeholder="Enter Mobile No">
+				</div>
+				<div class="form-group">
+					<label for="Message">Your Questions</label>
+					<textarea class="form-control" id="message" rows="3" placeholder="Give us more details to serve your better" ng-model="questions"></textarea>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="form-group">
+					<button type="button" class="btn btn-primary" ng-click="sendEnquiry();">Submit
+							<i id="spinnerSendDetails" style="display:none" aria-hidden="true" class="fa fa-circle-o-notch fa-spin fa-fw"></i>
+					</button>
+					<button type="button" class="btn btn-default" ng-click="closeModal(0)">Close</button>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="row">
-		<label for="email">Your email:</label><br />
-		<input id="email" class="input" name="email" type="text" value="" size="30" /><br />
-	</div>
-	<div class="row">
-		<label for="destination">Your Destination:</label><br />
-		<input id="destination" class="input" name="destination" value=getUrlData(); type="text" value="" size="30" /><br />
-	</div>
-	<div class="row">
-		<label for="message">Your message:</label><br />
-		<textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
-	</div>
-	<input id="submit_button" type="submit" value="Send email" />
-  </div>
-
 </div>
-</html>
