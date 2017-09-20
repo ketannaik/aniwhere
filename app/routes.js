@@ -1,3 +1,4 @@
+var nodeMailer = require('./controllers/mail.controller.js');
 module.exports = function(app) {
 
 	// server routes ===========================================================
@@ -9,5 +10,8 @@ module.exports = function(app) {
 	app.get('*', function(req, res) {
 		res.sendfile('./public/index.html');
 	});
+
+	app.route('/api/sendenquiry')
+	.post(nodeMailer.sendEnquiry);
 
 };

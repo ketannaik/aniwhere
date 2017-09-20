@@ -4,8 +4,8 @@ body {
     padding-bottom: 40px;
     /* color: #5a5a5a; */
     background-image: url(../images/background3.jpeg);
-    font-family: 'Sans-serif';
-    font-size: 14px;
+    font-family: 'Open Sans';
+    font-size: 16px;
   }
   
   .overlay { 
@@ -176,3 +176,10 @@ body {
     background-size: auto 100%;
     background-repeat: no-repeat;
 }
+
+.glyphicon {
+  font-size: 30px;
+  top: 7px !important;
+  color: #ECA79B;
+}
+
