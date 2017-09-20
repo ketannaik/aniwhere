@@ -1,4 +1,4 @@
-angular.module('AboutusController', []).controller('AboutusController', function($scope) {
+angular.module('ContactUsController', []).controller('ContactUsController', function($scope) {
     
         // $scope.tagline = 'The square root of life is pi!';	
 

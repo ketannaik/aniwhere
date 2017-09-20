@@ -20,7 +20,7 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 		
 		.when('/contactus', {
 			templateUrl: 'views/contactus.html',
-			controller: 'EnquiryController'	
+			controller: 'ContactUsController'	
 		})
 		
 		.when('/aboutus', {
