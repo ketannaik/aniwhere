@@ -2,21 +2,30 @@ var nodemailer = require('nodemailer');
 
 exports.sendEnquiry = function(req, res) {
     
+	var fromEmailId = req.body.email;
+	var toEmailId = 'aj@aniwheretours.com';
+	var name = req.body.name;
+	var details =req.body.otherdetails;
+	var mobileNumber = req.body.mobile;
+	
     var transporter = nodemailer.createTransport({
         host: 'mail.aniwheretours.com',
+		port: 25,
+        secure: false,
         auth: {
             user: 'aj@aniwheretours.com',
-            pass: 'of1Ky6&8'
+            pass: 'mahantji@1'
         }
     });
 
     var mailOptions = {
-        from: 'ketan.naik11@gmail.com',
-        to: 'ketan.naik11@gmail.com',
-        subject: 'Sending Email using Node.js',
-        text: 'That was easy!'
+        from: fromEmailId,
+        to: toEmailId,
+        subject: 'Enquiry for Dubai',
+        text: details+' '+ mobileNumber
     };
 
+	console.log(JSON.stringify(mailOptions));
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
             console.log(error);
